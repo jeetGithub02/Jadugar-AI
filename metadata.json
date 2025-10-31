@@ -1,0 +1,5 @@
+{
+  "name": "Jadugar - AI Image Wizard",
+  "description": "An AI-powered image editing application using Gemini's Nano Banana model to remove backgrounds, upscale images, and perform magical object manipulations.",
+  "requestFramePermissions": []
+}

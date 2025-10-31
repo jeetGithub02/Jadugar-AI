@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-g" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadugar - AI Image Wizard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // This is a workaround to make process.env.API_KEY available in the browser
+      // In a real build setup (like Vite), you would replace __API_KEY__
+      // with the actual key at build time. For this environment, we assume
+      // it's been set on the window object by an external script or deployment platform.
+      if (!window.process) {
+        window.process = {
+          env: {
+            // IMPORTANT: In a real deployment, you would replace this with a secure way to load your key.
+            // For example, using Vercel's environment variables.
+            API_KEY: "" 
+          }
+        };
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
